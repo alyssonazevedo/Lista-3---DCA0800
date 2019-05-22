@@ -1,0 +1,31 @@
+#include <stdio.h>
+
+int main(void) {
+  
+  //declaração de variáveis
+  int x, i, p=1;
+
+  //definição do programa
+  printf("\n___LER UM NÚMERO E IMPRIMIR SE ELE 'É PRIMO' OU 'NÃO É PRIMO'___\n\n");
+
+  //comunicação com o usuário
+  printf("\nDigite um número: ");
+  scanf("%d", &x);
+
+  //cálculo de identificação
+  for(i=2; i<=x-1; i++){
+    if(x%i == 0){
+      p = 0;
+    }
+  }
+
+  //resultado
+  if(p == 0){
+        printf("%d não é primo\n", x);
+    }
+    else{
+        printf("%d é primo\n", x);
+    }
+
+  return 0;
+}
