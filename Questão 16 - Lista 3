@@ -1,0 +1,28 @@
+#include <stdio.h>
+#include <string.h>
+#include <stdlib.h>
+
+int main(void) {
+  
+  //declaração de variáveis
+  char sentença[100];
+  int t, x;
+
+  //definição do programa
+  printf("\n___IMPRIMIR AO CONTRÁRIO UM TEXTO WUE O USUÁRIO FORNEÇA___\n\n");
+
+  //comunicação com o usuário e execução do programa
+  printf("Insira o texto desejado: ");
+  fgets(sentença, 100, stdin); 
+  t = strlen(sentença);
+  
+  //resultado
+  printf("\nO texto ao contrário é: ");
+
+  //execução do programa
+  for(x=t; x>=0; x--){
+    printf("%c", sentença[x]);
+  }
+
+  return 0;
+}
