@@ -1,0 +1,29 @@
+#include <stdio.h>
+#include <string.h>
+
+int main(void) {
+  
+  //declaração de variáveis
+  char sentença[100];
+  int t, x, y;
+
+  //definição do programa
+  printf("\n___IMPRIMIR QUANTOS CARACTERES 'A' EXISTEM EM UM TEXTO FORNECIDO PELO USUÁRIO___\n\n");
+
+  //comunicação com o usuário
+  printf("Insira o texto: ");
+  scanf("%[^\n]", sentença);
+  t = strlen(sentença);
+
+  //laço de varredura
+  for(x=t; x>=0; x--){
+    if(sentença[x] == 'a'){
+      y++;
+    }
+  }
+
+  //resultado
+  printf("\nExistem %d caracteres 'a'\n", y);
+
+  return 0;
+}
