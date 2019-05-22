@@ -1,0 +1,31 @@
+#include <stdio.h>
+
+int main(void){
+
+  //declaração de variáveis
+  int x, y, ft;  
+  
+  //definição do programa
+  printf("\n___DECOMPOSIÇÃO EM FATORES PRIMOS DE UM NÚMERO INTEIRO FORNECIDO E IMPRESSÃO DESTES___\n\n");
+
+  //comunicação com o usuário
+  printf("Digite o número: ");
+  scanf("%d", &x);
+  
+  //resultado
+  printf ("A decomposição do número %d é: 1 ",x);
+  
+  //cálculo
+  ft = 2;
+  while(x > 1){
+    y = 0;
+    while(x%ft == 0){
+      y++;
+      x = x/ft; 
+      printf ("x %d ",ft);      
+    } 
+  ft++; 
+  }
+    
+    return 0;
+}
