@@ -1,0 +1,21 @@
+#include <stdio.h>
+
+int main(void) {
+  
+  //declaração de variáveis
+  int mult = 0, i;
+
+  //definição do programa
+  printf("\n___MÚLTIPLOS DE 7 MENORES QUE 200___\n\n");
+
+  //resultado
+  printf("Os múltiplos são:\n");
+
+  //cálculo dos múltiplos (i<=28, pois 200/7 = 28,57)
+  for(i=0; i<=28; i++){
+    mult = i*7;
+    printf("%d\n", mult);
+  }
+
+  return 0;
+}
