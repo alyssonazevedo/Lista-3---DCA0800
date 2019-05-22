@@ -1,0 +1,26 @@
+#include <stdio.h>
+
+int main(void) {
+  
+  //declaração de variáveis
+  int x, i;
+
+  //definição do programa
+  printf("\n___DIVISORES DE UM NÚMERO QUALQUER___\n\n");
+
+  //comunicação com o usuário
+  printf("\nDigite o número desejado: "); 
+  scanf("%d", &x);
+
+  //resultado
+  printf("\nOs divisores de %d são:\n", x);
+
+  //cálculos dos divisores
+  for(i=1; i<=x; i++){
+    if((x % i) == 0){
+      printf("%d\n", i);
+    }
+  }
+
+  return 0;
+}
