@@ -1,0 +1,24 @@
+#include <stdio.h>
+
+int main(void) {
+  
+  //declaração de variáveis
+  int fatl, x;
+
+  //definição do programa
+  printf("\n___FATORIAL DE UM NÚMERO QUALQUER___\n\n");
+
+  //comunicação com o usuário
+  printf("\nDigite o número desejado: "); 
+  scanf("%d", &x);
+
+  //cálculo do fatorial
+  for(fatl=1; x>1; x--){
+    fatl = fatl*x;
+  }
+
+  //resultado
+  printf("\nO fatorial desse número é igual a: %d", fatl);
+    
+  return 0;
+}
