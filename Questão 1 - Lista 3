@@ -1,0 +1,20 @@
+#include <stdio.h>
+
+int main(void) {
+  
+  //declaração de variáveis
+  int som, i;
+
+  //definição do programa
+  printf("\n___SOMA DOS 100 PRIMEIROS NÚMEROS NATURAIS___\n\n");
+
+  //cálculo da soma
+  for(i=0; i<=100; i++){
+    som = som + i;
+  }
+
+  //resultado
+  printf("A soma dos 100 primeiros números naturais é igual a: %d", som);
+
+  return 0;
+}
