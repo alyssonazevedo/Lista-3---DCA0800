@@ -1,0 +1,43 @@
+#include<stdio.h>
+#include<stdlib.h>
+
+//função para geração de número primo
+int gprimo (int pri, int fal){
+  do{
+    int x, primo;
+    primo = 0; pri++;
+    for(x=1; x<pri; x++)
+      if(pri % x == 0)
+        primo++;
+      if(primo==1){
+          fal++;
+      }
+  }while(fal!=0);
+  
+  return(pri);
+}
+
+//função principal
+int main(void) {
+  
+  //declaração de variáveis
+  int pri=0, y, fal, num6, num12;
+
+  //definição do programa
+  printf("\n___CALCULAR A DIFERENÇA ENTRE O SEXTO E O DÉCIMO SEGUNDO NÚMEROS PRIMOS___\n\n");
+  
+  //identificando o sexto primo
+  y = 6; fal = y*(-1);
+  num6 = gprimo(pri, fal);
+  printf("O sexto número primo é igual a: %d\n", num6);
+
+  //identificando o décimo segundo
+  y = 12; fal = y*(-1);
+  num12 = gprimo(pri, fal);
+  printf("O décimo segundo número primo é igual a: %d\n", num12);
+
+  //resultado
+  printf("A diferença entre %d e %d é igual a: %d\n", num12, num6, num12-num6);
+
+  return 0;
+}
