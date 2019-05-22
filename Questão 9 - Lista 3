@@ -1,0 +1,22 @@
+#include <stdio.h>
+
+int main(void) {
+  
+  //declaração de variáveis
+  int x, y=0, z=0;
+
+  //definição do programa
+  printf("\n___CALCULAR E MOSTRAR A MÉDIA ARITMÉTICA DOS NÚMEROS PARES COMPREENDIDOS ENTRE 13 E 73___\n\n");
+
+  //cálculo da média
+  for(x=13; x<=73; x++){
+    if(x%2 == 0){
+      y+=x; z++;
+    }
+  }
+
+  //resultado
+  printf("A média é igual a: %d\n", y/z);
+
+  return 0;
+}
