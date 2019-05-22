@@ -1,0 +1,21 @@
+#include <stdio.h>
+
+int main(void) {
+  
+  //declaração de variáveis
+  int tab=4, i, j;
+
+  //definição do programa
+  printf("\n___IMPRIMIR A TABUADA DO NÚMERO 4___\n\n");
+
+  //resultado
+  printf("Tabuada do número 4:\n");
+
+  //cálculo
+  for(i=0; i<=10; i++){
+    j = i*tab;
+    printf("%dx%d = %d\n", tab, i, j);
+  }
+
+  return 0;
+}
