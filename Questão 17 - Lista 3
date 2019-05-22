@@ -1,0 +1,32 @@
+#include <stdio.h>
+#include <math.h>
+
+//função de conversão
+float cls_frt(float x){
+  float ft;
+  ft = (1.8*x + 32);
+    
+  return ft;
+}
+
+//função principal
+int main(void){
+  
+  //declaração de variáveis
+  float x, y;
+
+  //definição do programa
+  printf("\n___CONVERTER DE CELSIUS PARA FARENHEIT___\n\n");
+  
+  //comunicação com o usuário
+  printf("Digite a temperatura em graus Celsius: ");
+  scanf("%f",&x);
+
+  //cálculo de conversão
+  y = cls_frt(x);
+
+  //resultado
+  printf("\n%.1f graus em Celsius é igual a: %.1f graus em Farenheit", x, y);
+  
+  return 0;
+}
