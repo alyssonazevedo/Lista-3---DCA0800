@@ -1,0 +1,28 @@
+#include <stdio.h>
+
+int main(void) {
+  
+  //declaração de variáveis
+  int x, y;
+  int fbn, fb1, fb2, sm;
+
+  //definição do programa
+  printf("\n___IMPRESSÃO DA SOMA DOS N PRIMEIROS TERMOS DA SÉRIE DE FIBONACCI___\n\n");
+
+  //comunicação com o usuário
+  printf("Insira o enésimo termo da série de Fibonacci desejado: ");
+  scanf("%d", &y);
+  
+  //cálculo
+  fb2 = 0; fb1 = 1; fbn = 0; sm = 0;
+
+  for(x=2; x<=y; x++){
+    fbn = fb1 + fb2; fb2 = fb1;
+    fb1 = fbn; sm += fbn;
+  }
+
+  //resultado
+  printf("A soma é igual a: %d\n", sm);
+
+  return 0;
+}
