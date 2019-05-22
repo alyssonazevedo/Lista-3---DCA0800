@@ -1,0 +1,30 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <time.h>
+
+int main(void){
+  
+  //declaração das variáveis
+  int num[20], i, j;
+  srand(time(NULL));
+  
+  //definição do programa
+  printf("\n___GERAR E IMPRIMIR 20 NÚMEROS ENTRE 1000 A 1999 QUE DIVIDIDOS POR 11 DÃO UM RESTO IGUAL A 5___\n\n");
+
+  //resultado
+  printf ("Os números são:\n");
+
+  //cálculo dos números
+  for(i=0; i<2000; i++){
+    num[i]= rand() % 1000 + 1000;
+    if(num[i] % 11 == 5){ 
+      printf("%d\n", num[i]);
+      j++;
+      if(j==20){
+        i=2000  ;
+      }
+    }
+  }
+
+    return 0;
+}
