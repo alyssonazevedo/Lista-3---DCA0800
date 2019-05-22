@@ -1,0 +1,30 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <time.h>
+
+//função para gerar número aleatório
+int altro(int x, int y){
+  int r;
+  r = x + (rand() % (y-x) ) ; 
+  
+  return r;
+}
+
+//função principal
+int main(void) {
+  
+  //declaração de variáveis
+  int x, y, z;
+  srand(time(NULL));
+
+  //definição do programa
+  printf("\n___IMPRIMIR UM NÚMERO ALEATÓRIO NO INTERVALO FECHADO [A,B]___\n\n");
+    
+  //comunicação com o usuário
+  printf("Digite a e b para o intervalo [a,b]\n: ");
+  scanf("%d%d",&x,&y);
+  
+  //cálculo e resultado
+  z = altro(x,y);
+  printf("Número aleatório do intervalo [%d,%d]: %d\n",x,y,z);
+}
