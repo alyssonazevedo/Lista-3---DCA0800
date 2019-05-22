@@ -1,0 +1,22 @@
+#include <stdio.h>
+
+int main(void) {
+  
+  //declaração de variáveis
+  int divisor = 0, i;
+
+  //definição do programa
+  printf("\n___NÚMEROS DIVISÍVEIS POR QUATRO MENORES QUE 100___\n\n");
+
+  //resultado
+  printf("Os numeros são:\n");
+
+  //cálculo dos números divisíveis
+  //i<=24, pois 100/4 = 25
+  for(i=0; i<=24; i++){
+    divisor = i*4;
+    printf("%d\n", divisor);
+  }
+
+  return 0;
+}
