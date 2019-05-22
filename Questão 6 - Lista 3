@@ -1,0 +1,25 @@
+#include <stdio.h>
+
+int main(void) {
+  
+  //declaração de variáveis
+  int x, y, L;
+
+  //definição do programa
+  printf("\n___MENOR INTEIRO POSITIVO X CUJO QUADRADO É SUPERIOR A UM VALOR L DADO___\n\n");
+
+  //comunicação com o usuário
+  printf("Digite o valor de L: ");
+  scanf("%d", &L);
+
+  //laço do cálculo
+  do{
+    x = x + 1;
+    y = x * x;
+  }while(y <= L);
+
+  //resultado
+  printf ("\no menor número inteiro x é: %d", x);
+
+  return 0;
+}
