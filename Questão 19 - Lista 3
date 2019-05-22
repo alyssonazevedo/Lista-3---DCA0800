@@ -27,4 +27,6 @@ int main(void) {
   //cálculo e resultado
   z = altro(x,y);
   printf("Número aleatório do intervalo [%d,%d]: %d\n",x,y,z);
+
+  return(0);
 }
