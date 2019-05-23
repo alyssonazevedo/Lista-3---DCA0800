@@ -1,0 +1,51 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+
+int main(void) {
+  
+  //declaração de variáveis
+  char text[100];
+  int textm[100];
+  int ascii[255];
+  int n;
+
+  //definição do programa
+  printf("\n___Ler um texto que o usuário digitar no teclado. Em seguida, informar a contagem de ocorrências de cada um dos caracteres [a-z] digitados, não importando se o usuário digitou letras minúsculas ou maiúsculas___\n\n");
+
+  //comunicação com o usuário
+  printf("\nDigite o texto: ");
+  fgets(text, 255, stdin);
+
+  //Zerando Tabela ASCII
+  for (n=0; n<255; n++) {
+    ascii[n]=0;
+  }
+
+  //Transformando os carcteres da frase em inteiros correspondentes da tabela (ASCII)
+  for (n=0; n<strlen(text); n++) {
+    textm[n] = text[n];
+  }
+
+  //Transformando as letras maiusculas em minusculas
+  for (n=0; n<strlen(text); n++) {
+    if (textm[n]>64 && textm[n] < 91) {
+     textm[n] = textm[n]+32;
+    }
+  }
+
+  //Loop da contagem
+  for (n=0; n<strlen(text); n++) { 
+    if (textm[n] != 32) { 
+      ascii[textm[n]]++;
+    } 
+  }
+
+  //Imprimindo repetições
+  for (n=14; n<255; n++) { //Inicia a partir do 14 para não interpretar a entrado do enter do teclado na tabela ASCII
+    if (ascii[n] >=1) {  
+      printf("\nO caractere %c aparece %d vezes no texto.\n", n, ascii[n]);
+    }
+  }
+  return 0;
+}
