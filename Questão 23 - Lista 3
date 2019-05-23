@@ -1,0 +1,37 @@
+#include <stdio.h>
+#include <string.h>
+
+int main(void) {
+  
+  //declaração de variáveis
+  char sentença[100];
+  int tmo, i, x;
+
+  //definição do programa
+  printf("\n___LEITURA DE UMA FRASE DO TECLADO E IMPRESSÃO DA QUANTIDADE DE CARACTERES E PALAVRAS DIGITADAS___\n\n");
+
+  //comunicação com o usuário
+  printf ("\nDigite a frase desejada: ");
+  
+  //leitura e cálculos
+  fgets(sentença, 101, stdin);
+  tmo = strlen(sentença);
+
+  for(i=0; i<tmo; i++){
+    if(sentença[i] == ' ' && sentença[i-1] != ' '){
+      x++;
+    }
+  }
+
+  for(i=0; sentença[i] != '\0'; i++){
+    if(sentença[i] == ' '){
+      tmo = tmo-1;
+    }
+  }
+
+  //resultado
+  printf("\nA frase possui %d caracteres", tmo - 1);
+  printf("\ne %d palavras", x + 1);
+
+  return 0;
+}
