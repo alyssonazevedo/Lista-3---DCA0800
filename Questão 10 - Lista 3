@@ -1,0 +1,45 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+int main(void){
+  
+  //declaração de variáveis
+  int x[10], i, h, j=0, z=0;
+
+  //comunicação com o usuário  
+  printf("Digite 10 números:\n");
+  for(i=0; i<10; i++){
+  scanf("%d", &x[i]);
+  }
+  i=0, h=0;
+  
+  //resultado
+  printf("\nOs números que estão no intervalo [10,50] são:\n");
+  
+  //laço do programa
+  while(i<10){ 
+    if(x[i]<=50 && x[i]>=10){
+      printf("%d\n", x[i]);
+      j++;
+    } 
+    i++;  
+  }
+
+  //resultado
+  printf("\nOs números que não estão no intervalo [10,50] são:\n");
+
+  //laço do programa
+  while(h<10){ 
+    if(x[h]<10 || x[h]>50){
+        printf("%d\n", x[h]);
+        z++;
+    } 
+    h++;  
+  }
+
+  //resultado
+  printf("\nExistem %d números dentro do intervalo\n", j);  
+  printf("e %d números fora do intervalo\n", z); 
+  
+  return 0;
+}
