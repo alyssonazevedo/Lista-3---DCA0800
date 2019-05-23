@@ -1,0 +1,55 @@
+#include <stdio.h>
+
+int main(void){
+  
+  //declaração de variáveis
+  int x[]={4,5,6,1,8};
+  int a=5, b, l, k;
+  b = x[0];
+  
+  //definição do programa
+  printf("\n___Função que recebe um array formado pelos elementos {4,5,6,1,8} de inteiros e desenha um gráfico horizontal usando '*'___\n\n");
+
+  //cálculos e resultado
+  for (l= 1; l<a; l++){
+    if (x[l] > b){
+      b = x[l];
+    }
+  }
+    
+  int plot[b][a];
+    
+  for (l =0; l<b; l++){
+    for (k= 0; k<a; k++){
+      plot[l][k]=0;
+    }
+  }
+    
+  for (k =0; k<a; k++){
+    for (l= b-1; l >=b-x[k]; l--){
+      plot[l][k]=1;
+    }
+  }
+    
+  for (l=0; l <b; l++){
+    for (k= 0; k< a; k++){
+      printf("%d", plot[l][k]);
+    }
+    printf("\n");
+  }
+  printf("...\n");
+    
+  for (l= 0; l< b; l++){
+    for(k= 0; k <a; k++){
+      if(plot[l][k] == 0){
+        printf(" ");
+      }
+      else{
+        printf("*");
+      }
+    }
+    printf("\n");
+  }
+    
+    return 0;
+}
