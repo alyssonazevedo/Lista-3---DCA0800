@@ -6,6 +6,9 @@ int main(void){
   //declaração de variáveis
   int x[10], i, h, j=0, z=0;
 
+  //definição do programa
+  printf("\n___Ler 10 valores, um de cada vez, e contar quantos deles estão no intervalo [10,50] e quantos deles estão fora deste intervalo, mostrando estas informações___\n\n");
+
   //comunicação com o usuário  
   printf("Digite 10 números:\n");
   for(i=0; i<10; i++){
